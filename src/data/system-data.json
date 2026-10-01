@@ -1,0 +1,529 @@
+{
+  "gameName": "Beetle Knight",
+  "startingAttributes": {
+    "spellSlots": 2,
+    "purpose": 3,
+    "emblems": 2,
+    "availableDice": ["d4", "d6", "d8", "d10", "d12", "d20"]
+  },
+  "attributes": [
+    {
+      "id": "strength",
+      "name": "Força",
+      "description": "Levantar peso, escalar, lutar, etc."
+    },
+    {
+      "id": "intelligence",
+      "name": "Inteligência",
+      "description": "Raciocínio, memória, compreensão, etc."
+    },
+    {
+      "id": "presence",
+      "name": "Presença",
+      "description": "Carisma, intimidação, persuasão, etc."
+    },
+    {
+      "id": "agility",
+      "name": "Agilidade",
+      "description": "Movimento rápido, destreza, etc."
+    }
+  ],
+  "species": [
+    {
+      "id": "percevejo-assassino",
+      "name": "Percevejo-Assassino",
+      "attributeAdvantage": "strength",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 0,
+        "escavacao": 2,
+        "nado": 3
+      },
+      "specialAbilities": [
+        {
+          "name": "Instintos Letais",
+          "description": "Você recebe vantagem no primeiro ataque a cada turno."
+        }
+      ]
+    },
+    {
+      "id": "abelha",
+      "name": "Abelha",
+      "attributeAdvantage": "agility",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 3,
+        "voo": 6,
+        "escavacao": 2,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Picada",
+          "description": "d8 Arma Corpo-a-Corpo"
+        }
+      ]
+    },
+    {
+      "id": "besouro",
+      "name": "Besouro",
+      "attributeAdvantage": "strength",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 3,
+        "escavacao": 3,
+        "nado": 1
+      },
+      "specialAbilities": [
+        {
+          "name": "Chifres ou Mandíbula",
+          "description": "d8 Arma Corpo-a-Corpo"
+        }
+      ]
+    },
+    {
+      "id": "besouro-bombardeiro",
+      "name": "Besouro Bombardeiro",
+      "attributeAdvantage": "defense",
+      "bonuses": {
+        "spellSlots": 1,
+        "purpose": 1,
+        "emblems": 1,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 3,
+        "escavacao": 2,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Rude Surpresa",
+          "description": "Como uma ação, você pode lançar um ataque químico de D10 contra cada criatura dentro de um cone de 3 cm (defenda-se como normalmente). Depois de usar esta habilidade, você não poderá usá-la novamente até completar um descanso Seguro ou Arriscado."
+        }
+      ]
+    },
+    {
+      "id": "formiga-carpinteira",
+      "name": "Formiga Carpinteira",
+      "attributeAdvantage": "strength",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 0,
+        "escavacao": 5,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Força Ancestral",
+          "description": "+1 em qualquer teste de força que você fizer para empurrar, puxar, levantar ou arremessar coisas."
+        },
+        {
+          "name": "Especialista em construção",
+          "description": "Você recebe vantagem em testes de inteligência realizados para identificar portas secretas ou armadilhas."
+        }
+      ]
+    },
+    {
+      "id": "grilo",
+      "name": "Grilo",
+      "attributeAdvantage": "agility",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 8,
+        "voo": 0,
+        "escavacao": 1,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Pulo sapeca",
+          "description": "Enquanto rastejam, os grilos conseguem saltar 4 cm no ar."
+        },
+        {
+          "name": "Chute Sônico",
+          "description": "Dano corpo a corpo d6, ou d8 se você realizou uma ação de salto imediatamente antes. O dano máximo concede uma ação extra."
+        }
+      ]
+    },
+    {
+      "id": "barata-dubia",
+      "name": "Barata-Dúbia",
+      "attributeAdvantage": "defenses",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 0,
+        "escavacao": 4,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Sobrevivi Diacho",
+          "description": "Sempre que você ganharia Propósito em uma disputa, você pode optar por restaurar d4 PV em vez disso."
+        },
+        {
+          "name": "Corpo de barata",
+          "description": "Seu corpo achatado e denso pode se espremer por aberturas tão estreitas quanto ¼ cm, e você sofre -1 de dano por frio, calor, veneno e produtos químicos."
+        }
+      ]
+    },
+    {
+      "id": "formiga-de-fogo",
+      "name": "Formiga de Fogo",
+      "attributeAdvantage": "strength",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 0,
+        "escavacao": 5,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Assar o Churras",
+          "description": "d8 Ataque a Distância."
+        },
+        {
+          "name": "Apimentado",
+          "description": "Reduz qualquer dano que você sofrer de fogo ou calor."
+        }
+      ]
+    },
+    {
+      "id": "lesma",
+      "name": "Lesma",
+      "attributeAdvantage": "presence",
+      "bonuses": {
+        "spellSlots": 3,
+        "purpose": 3,
+        "emblems": 3,
+        "hpDiceUpgrade": true
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 0,
+        "escavacao": 3,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Grosso",
+          "description": "Receba vantagem em seu máximo HP inicial. (Ex d8 para d10 e então dobre o valor máximo)"
+        },
+        {
+          "name": "Pegajoso",
+          "description": "Enquanto rasteja, você pode produzir um rastro de gosma à vontade. Qualquer criatura que não seja lesma ou caracol que tentar rastejar através do seu rastro deve ser bem-sucedida em um teste de agilidade moderado ou ficará presa na gosma por 1 turno, encerrando imediatamente seu turno em caso de falha."
+        }
+      ]
+    },
+    {
+      "id": "opiliao",
+      "name": "Opilião",
+      "attributeAdvantage": "intelligence",
+      "bonuses": {
+        "spellSlots": 3,
+        "purpose": 3,
+        "emblems": 3,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 7,
+        "voo": 0,
+        "escavacao": 0,
+        "nado": 1
+      },
+      "specialAbilities": [
+        {
+          "name": "Pernas Longas",
+          "description": "+1 cm em ataques corpo a corpo, e você pode atacar por cima ou ao redor de outra criatura ou obstáculo."
+        }
+      ]
+    },
+    {
+      "id": "mutuca",
+      "name": "Mutuca",
+      "attributeAdvantage": "agility",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 2,
+        "voo": 7,
+        "escavacao": 0,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Atucanar",
+          "description": "Enquanto estiver voando, promova seu primeiro ataque corpo a corpo a cada turno contra uma criatura rastejante ou nadadora."
+        },
+        {
+          "name": "Ligeiro",
+          "description": "Durante o voo, você não provoca ataques de oportunidade."
+        }
+      ]
+    },
+    {
+      "id": "mosca-impostora",
+      "name": "Mosca Impostora",
+      "attributeAdvantage": "intelligence",
+      "bonuses": {
+        "spellSlots": 2,
+        "purpose": 2,
+        "emblems": 2,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 3,
+        "voo": 5,
+        "escavacao": 0,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Disfarce",
+          "description": "Como uma ação, você pode disfarçar-se para parecer outro inseto."
+        },
+        {
+          "name": "Ligeiro",
+          "description": "Durante o voo, você não provoca ataques de oportunidade."
+        }
+      ]
+    },
+    {
+      "id": "aranha-saltadora",
+      "name": "Aranha Saltadora",
+      "attributeAdvantage": "agility",
+      "bonuses": {
+        "spellSlots": 0,
+        "purpose": 0,
+        "emblems": 0,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 8,
+        "voo": 0,
+        "escavacao": 1,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Salto sapeca",
+          "description": "Enquanto rastejam, saltando. As aranhas podem saltar 4 cm pelo ar."
+        },
+        {
+          "name": "Fio de arrasto",
+          "description": "As aranhas-saltadoras podem deixar um fio de seda que pode segurá-las em uma queda."
+        }
+      ]
+    },
+    {
+      "id": "vagalume",
+      "name": "Vagalume",
+      "attributeAdvantage": "presence",
+      "bonuses": {
+        "spellSlots": 3,
+        "purpose": 3,
+        "emblems": 3,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 5,
+        "escavacao": 0,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Brilho",
+          "description": "Pode acender à vontade, distraindo os desavisados e chamando a atenção."
+        }
+      ]
+    },
+    {
+      "id": "borboleta-monarca",
+      "name": "Borboleta Monarca",
+      "attributeAdvantage": "presence",
+      "bonuses": {
+        "spellSlots": 3,
+        "purpose": 3,
+        "emblems": 3,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 5,
+        "escavacao": 0,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Bênção do Monarca",
+          "description": "Como uma ação, você pode tocar uma criatura viva ferida e rolar o dado de Força dela para restaurar essa quantidade de PV. Depois de usar esta habilidade, você não poderá usá-la novamente até concluir um descanso Seguro ou Arriscado."
+        }
+      ]
+    },
+    {
+      "id": "mariposa",
+      "name": "Mariposa",
+      "attributeAdvantage": "intelligence",
+      "bonuses": {
+        "spellSlots": 2,
+        "purpose": 2,
+        "emblems": 2,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 5,
+        "escavacao": 0,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Mágica",
+          "description": "Consegue criar pequenas ilusões à vontade com uma ação. Sem luz, som ou cheiro."
+        }
+      ]
+    },
+    {
+      "id": "caramujo-zebra",
+      "name": "Caramujo Zebra",
+      "attributeAdvantage": "defenses",
+      "bonuses": {
+        "spellSlots": 1,
+        "purpose": 1,
+        "emblems": 1,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 0,
+        "escavacao": 0,
+        "nado": 4
+      },
+      "specialAbilities": [
+        {
+          "name": "Carapaça",
+          "description": "+1 Defesa. Sempre que você obtiver sucesso máximo em um teste de defesa, ganhe 1 de Propósito."
+        }
+      ]
+    },
+    {
+      "id": "aranha-tecela",
+      "name": "Aranha Tecelã",
+      "attributeAdvantage": "intelligence",
+      "bonuses": {
+        "spellSlots": 3,
+        "purpose": 3,
+        "emblems": 3,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 6,
+        "voo": 0,
+        "escavacao": 1,
+        "nado": 1
+      },
+      "specialAbilities": [
+        {
+          "name": "Teias Pegajosas",
+          "description": "Você pode criar fios de seda pegajosa tão fortes quanto fibra. No lugar certo e com o momento apropriado, você pode usar essas teias para armar armadilhas não letais."
+        }
+      ]
+    },
+    {
+      "id": "tatu-bolinha-de-jardim",
+      "name": "Tatu-bolinha-de-jardim",
+      "attributeAdvantage": "defenses",
+      "bonuses": {
+        "spellSlots": 1,
+        "purpose": 1,
+        "emblems": 1,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 5,
+        "voo": 0,
+        "escavacao": 6,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Enrolar",
+          "description": "Tatuzinhos-de-jardim podem se enrolar defensivamente. Custa 1 ação para enrolar. Você recebe +1 de defesa adicional quando enrolado. Quando enrolado, você pode desenrolar como uma ação ou fazer um Ataque Rolante."
+        },
+        {
+          "name": "Ataque Rolante",
+          "description": "Use 1 ação para rolar sua velocidade de rastejamento +1 em linha reta. Faça um ataque de agilidade de d8 contra a primeira criatura que você atingir. Ao rolar ladeira abaixo, faça um ataque de agilidade de d10 em vez disso."
+        }
+      ]
+    },
+    {
+      "id": "escaravelho",
+      "name": "Escaravelho",
+      "attributeAdvantage": "presence",
+      "bonuses": {
+        "spellSlots": 2,
+        "purpose": 2,
+        "emblems": 2,
+        "hpDiceUpgrade": false
+      },
+      "movement": {
+        "rastejo": 4,
+        "voo": 3,
+        "escavacao": 2,
+        "nado": 0
+      },
+      "specialAbilities": [
+        {
+          "name": "Encanto do Escaravelho",
+          "description": "Uma vez por dia, você pode enfeitiçar uma criatura que não seja um cavaleiro por 1 hora. Favorece qualquer teste de presença feito para persuadir ou enganar a criatura enfeitiçada. Tentar ferir a criatura encerrará este efeito imediatamente."
+        }
+      ]
+    }
+  ]
+}

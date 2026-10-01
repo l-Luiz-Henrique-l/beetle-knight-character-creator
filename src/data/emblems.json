@@ -1,0 +1,425 @@
+{
+  "gameName": "Beetle Knight",
+  "categories": [
+    {
+      "id": "luz",
+      "name": "1 - LUZ",
+      "emblems": [
+        {
+          "id": "raio-cegante",
+          "name": "Raio Cegante",
+          "actions": 1,
+          "isPassive": false,
+          "range": "12 cm",
+          "description": "Uma criatura à sua escolha não poderá ver nos próximos 3 turnos, a menos que passe em um teste de Presença vs. Conjuração."
+        },
+        {
+          "id": "luz-curativa",
+          "name": "Luz Curativa",
+          "actions": 1,
+          "isPassive": false,
+          "range": "toque",
+          "description": "Uma criatura que você toca recebe cura igual ao resultado de uma rolagem de Conjuração."
+        },
+        {
+          "id": "luz-reveladora",
+          "name": "Luz Reveladora",
+          "actions": 1,
+          "isPassive": false,
+          "range": "variável",
+          "description": "Alcance: Role o resultado da magia para definir os cm de raio. Mínimo de 4 cm. Quaisquer criaturas escondidas dentro do alcance são reveladas a você."
+        },
+        {
+          "id": "explosao-cegante",
+          "name": "Explosão Cegante",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Uma explosão de luz intensa distrai todas as criaturas em um raio de 3 cm por 1 turno. Cada criatura afetada recebe desvantagem em ataques corpo a corpo, à distância ou com magias por 1 turno."
+        },
+        {
+          "id": "sombra",
+          "name": "Sombra",
+          "actions": 1,
+          "isPassive": false,
+          "range": "próprio",
+          "description": "Você está envolto em escuridão. Ataques corpo a corpo ou à distância contra recebem desvantagem por 3 turnos ou até que você ataque."
+        },
+        {
+          "id": "extinguir",
+          "name": "Extinguir",
+          "actions": 1,
+          "isPassive": false,
+          "range": "12 cm (raio)",
+          "description": "Você pode desligar qualquer fonte de luz que você possa ver dentro de 12 cm por 3 turnos. As fontes de luz voltam a acender após o fim do efeito."
+        },
+        {
+          "id": "ilusao",
+          "name": "Ilusão",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Crie uma ilusão de 1/2 cm ou menor. Ela não pode se mover, mas pode emitir uma luz fraca e produzir um som fraco. Ela se revela como uma ilusão ao ser tocada."
+        },
+        {
+          "id": "cura",
+          "name": "Cura",
+          "actions": 2,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "Role Conjuração. Cure 1 ou mais criaturas numa quantidade igual ao resultado +1."
+        }
+      ]
+    },
+    {
+      "id": "elemental",
+      "name": "2 - ELEMENTAL",
+      "emblems": [
+        {
+          "id": "imbuir-fogo",
+          "name": "Imbuir Fogo",
+          "actions": 1,
+          "isPassive": true,
+          "range": "6 cm",
+          "description": "Imbuir uma arma ou item com uma camada de chamas. Alvos inflamáveis pegam fogo. Você pode usar uma reação para rolar seu Teste de Conjuração e adicionar o resultado a um ataque feito com a arma. Caso contrário, adicione +1 a ataques feitos com a arma."
+        },
+        {
+          "id": "imbuir-pedra",
+          "name": "Imbuir Pedra",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Role Conjuração and adicione defesa igual ao resultado para criatura ou item alvo pelos próximos 3 turnos."
+        },
+        {
+          "id": "imbuir-agua",
+          "name": "Imbuir Água",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Role Conjuração e o Alvo é arrastado pelo número resultante em cm com um jato repentino de água. A chama é apagada e a tinta ou resíduos são removidos."
+        },
+        {
+          "id": "imbuir-ar",
+          "name": "Imbuir Ar",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "A criatura alvo é envolvida em ar rodopiante. Os ataques contra o alvo recebe duas Desvantagens por 2 turnos."
+        },
+        {
+          "id": "imbuir-relampago",
+          "name": "Imbuir Relâmpago",
+          "actions": 2,
+          "isPassive": false,
+          "range": "3 cm (linha)",
+          "description": "A arma alvo é imbuída com relâmpago. Durante o próximo ataque da arma, faça uma única jogada de ataque contra todas as criaturas em um feixe reto de 6 cm, as criaturas rolam defesa contra o resultado da rolagem de ataque e sofrem dano."
+        },
+        {
+          "id": "forma-da-terra",
+          "name": "Forma da Terra",
+          "actions": 1,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "Mova um cubo de terra de 1 cm dentro de um raio de 5 cm para qualquer formato."
+        },
+        {
+          "id": "faisca",
+          "name": "Faísca",
+          "actions": 2,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "Uma chama esférica de 1 cm de diâmetro aparece a 1 cm de um alvo dentro do alcance. Faça uma jogada de ataque usando Conjuração contra a Agilidade do alvo. Faísca permanece no mesmo lugar por 1 turno. Se uma criatura terminar seu turno a 1 cm de distância, faça uma jogada de ataque usando Conjuração."
+        },
+        {
+          "id": "pinos",
+          "name": "Pinos",
+          "actions": 1,
+          "isPassive": false,
+          "range": "20 cm",
+          "description": "4 pinos são lançados em até 4 alvos dentro do alcance. Ataque com d6 para cada pino. Atira 1 pino a menos cada vez que é usado durante um turno."
+        }
+      ]
+    },
+    {
+      "id": "forca",
+      "name": "3 - FORÇA",
+      "emblems": [
+        {
+          "id": "vibrar",
+          "name": "Vibrar",
+          "actions": 1,
+          "isPassive": false,
+          "range": "2 cm",
+          "description": "Você rola Conjuração contra a Força do Alvo. Em caso de sucesso, o alvo deixa cair o que estiver segurando em suas garras. Se o alvo for um objeto, ele vibra. Se o objeto for frágil, ele pode quebrar."
+        },
+        {
+          "id": "unir",
+          "name": "Unir",
+          "actions": 1,
+          "isPassive": false,
+          "range": "12 cm",
+          "description": "Cole dois itens em contato juntos Isso dura 3 turnos. Com 2 ações, qualquer criatura pode separar os itens."
+        },
+        {
+          "id": "empurre",
+          "name": "Empurre",
+          "actions": 1,
+          "isPassive": false,
+          "range": "1 cm",
+          "description": "Role Conjuração. Empurre o alvo para longe de você pelo resultado em cm. O alvo não reage por 1 turno."
+        },
+        {
+          "id": "lentidao",
+          "name": "Lentidão",
+          "actions": 1,
+          "isPassive": false,
+          "range": "12 cm",
+          "description": "Role Conjuração. O Número resultante é a quantidade de alvos dentro de 12 cm tem seu movimento reduzido pela metade por três turnos."
+        },
+        {
+          "id": "puxar",
+          "name": "Puxar",
+          "actions": 1,
+          "isPassive": false,
+          "range": "10 cm",
+          "description": "Role Conjuração. A criatura Alvo dentro do alcance é puxada em sua direção pelo número resultante em cm. Ela perde 1 ação em seu próximo turno."
+        },
+        {
+          "id": "anel-da-gravidade",
+          "name": "Anel da Gravidade",
+          "actions": 2,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "A área de efeito é um cilindro de 2 cm de raio e 6 cm de altura, centrado em um ponto dentro do alcance. Quaisquer criaturas dentro della área de efeito são puxadas em direção à terra por 6 cm."
+        },
+        {
+          "id": "explosao-primordial",
+          "name": "Explosão Primordial",
+          "actions": 2,
+          "isPassive": false,
+          "range": "2 cm (raio)",
+          "description": "Qualquer criatura ao seu redor dentro de 2 cm é empurrada rapidamente 2 cm para trás. Elas não sofrem ataques de oportunidade de você."
+        },
+        {
+          "id": "ruptura",
+          "name": "Ruptura",
+          "actions": 3,
+          "isPassive": false,
+          "range": "5 cm (raio)",
+          "description": "Faça uma única jogada de ataque com Conjuração. Todas as criaturas dentro do alcance rolam Força contra o resultado."
+        }
+      ]
+    },
+    {
+      "id": "natureza",
+      "name": "4 - NATUREZA",
+      "emblems": [
+        {
+          "id": "vinhas",
+          "name": "Vinhas",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "O alvo dentro do alcance está enredado em uma vinhas. Ele perde 1 ação em seus próximos 2 turnos."
+        },
+        {
+          "id": "toque-venenoso",
+          "name": "Toque Venenoso",
+          "actions": 1,
+          "isPassive": false,
+          "range": "toque",
+          "description": "O alvo rola um d8 Força contra sua Conjuração no final de cada rodada e sofre dano igual à diferença em caso de falha. Role Conjuração para determinar quantas rodadas dura."
+        },
+        {
+          "id": "rosto-em-decomposicao",
+          "name": "Rosto em Decomposição",
+          "actions": 1,
+          "isPassive": false,
+          "range": "10 cm",
+          "description": "Um alvo que possa ver você deve usar 1 ação para se afastar de você por medo com todo o seu movimento em seu próximo turno."
+        },
+        {
+          "id": "sifon",
+          "name": "Sifão",
+          "actions": 1,
+          "isPassive": false,
+          "range": "2 cm",
+          "description": "Não custa Propósito. Alvo dentro do alcance perde 2 Propósito. Outro alvo de sua escolha dentro do alcance recupera 2 de Propósito."
+        },
+        {
+          "id": "sinalizador-antimagico",
+          "name": "Sinalizador Antimágico",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Cria um campo antimágico em uma esfera de 1 cm de raio em torno de qualquer ponto dentro do alcance por 1 turno."
+        },
+        {
+          "id": "casca-de-arvore",
+          "name": "Casca de Árvore",
+          "actions": 1,
+          "isPassive": false,
+          "range": "3 cm",
+          "description": "A criatura alvo dentro do alcance aumenta seu dado de defesa por 3 turnos."
+        },
+        {
+          "id": "peidei",
+          "name": "Peidei",
+          "actions": 2,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "Criaturas à sua escolha dentro do alcance rolam Intelecto contra Conjuração. Em caso de falha, elas não podem se mover em sua direção."
+        },
+        {
+          "id": "amigo-mosquito",
+          "name": "Amigo Mosquito",
+          "actions": 2,
+          "isPassive": false,
+          "range": "próprio",
+          "description": "Encanta permanentemente um mosquito que passar por perto como um companheiro com d4 para atributos e 2 PV. Máx. 2 mosquitos."
+        }
+      ]
+    },
+    {
+      "id": "psiquico",
+      "name": "5 - PSÍQUICO",
+      "emblems": [
+        {
+          "id": "atordoar",
+          "name": "Atordoar",
+          "actions": 1,
+          "isPassive": false,
+          "range": "1 cm",
+          "description": "Um alvo dentro do alcance não pode atacar em seu próximo turno."
+        },
+        {
+          "id": "diminuir",
+          "name": "Diminuir",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "O alvo reduz seu dado de ataque por 2 turnos."
+        },
+        {
+          "id": "bloqueio-mental",
+          "name": "Bloqueio Mental",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Você e o alvo ficam presos psiquicamente no lugar por até 3 turnos. Você pode liberar o bloqueio a qualquer momento. O alvo pode tentar quebrar o bloqueio ao final de cada um de seus turnos obtendo sucesso em um teste de intelecto contra conjuração. Enquanto o bloqueio estiver ativado, nem você nem o alvo podem realizar qualquer ação."
+        },
+        {
+          "id": "tava-ali",
+          "name": "Tava Ali",
+          "actions": 1,
+          "isPassive": false,
+          "range": "3 cm",
+          "description": "Você desaparece e reaparece em qualquer ponto dentro do alcance."
+        },
+        {
+          "id": "sorte-atrasada",
+          "name": "Sorte Atrasada",
+          "actions": 1,
+          "isPassive": false,
+          "range": "6 cm",
+          "description": "Receba Vantagem e role novamente qualquer rolagem única que você ou um aliado fizer antes do início do seu próximo turno."
+        },
+        {
+          "id": "brainhot",
+          "name": "Brainhot",
+          "actions": 1,
+          "isPassive": false,
+          "range": "visual",
+          "description": "Escolha uma criatura que possa ver você. Ela fixa o olhar em você. Ela não pode fazer ataques de oportunidade pelos próximos 2 turnos."
+        },
+        {
+          "id": "incorporeo",
+          "name": "Incorpóreo",
+          "actions": 2,
+          "isPassive": false,
+          "range": "próprio",
+          "description": "Torne-se uma sombra de si mesmo por 10 segundos. Não sofra dano de ataques não mágicos por 10 segundos. Você pode se mover através de paredes."
+        },
+        {
+          "id": "encantamento",
+          "name": "Encantamento",
+          "actions": 2,
+          "isPassive": false,
+          "range": "2 cm (raio)",
+          "description": "Criaturas que você escolhe dentro de 2 cm rolam Intelecto contra seu Teste de Conjuração. Em caso de falha ou empate, elas ficam suscetíveis às suas sugestões não letais. Dura 5 turnos. Os alvos podem rolar Intelecto contra seu Teste de Conjuração ao final de cada um de seus turnos para quebrar o encantamento. Eles sabem que foram encantados após o efeito do Emblema terminar."
+        }
+      ]
+    },
+    {
+      "id": "poderes-de-combate",
+      "name": "6 - PODERES DE COMBATE",
+      "emblems": [
+        {
+          "id": "mestre-de-armas",
+          "name": "Mestre de Armas",
+          "actions": 2,
+          "isPassive": false,
+          "range": "próprio",
+          "description": "Para seu próximo ataque corpo a corpo ou à distância, role seu dado de ataque 2 vezes e some os resultados."
+        },
+        {
+          "id": "confianca",
+          "name": "Confiança",
+          "actions": 1,
+          "isPassive": false,
+          "range": "3 cm",
+          "description": "A criatura alvo dentro do alcance não recebe desvantagem em ataques corpo a corpo por 2 turnos."
+        },
+        {
+          "id": "inabalavel",
+          "name": "Inabalável",
+          "actions": 2,
+          "isPassive": true,
+          "range": "próprio",
+          "description": "Quando sua vida chega a 0 ou menos, você se recupera e permanece com 1 ponto de vida uma vez por dia."
+        },
+        {
+          "id": "inspiracao",
+          "name": "Inspiração",
+          "actions": 1,
+          "isPassive": false,
+          "range": "3 cm",
+          "description": "A criatura alvo dentro do alcance recebe 1 ação extra por 2 turnos que pode ser usada para ataques corpo a corpo ou à distância."
+        },
+        {
+          "id": "onde-doi-mais",
+          "name": "Onde Dói Mais",
+          "actions": 2,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "O alvo reduz seu dado de defesa por 1 turno. Faça um ataque corpo a corpo ou à distância."
+        },
+        {
+          "id": "ataque-de-distracao",
+          "name": "Ataque de Distração",
+          "actions": 2,
+          "isPassive": false,
+          "range": "5 cm",
+          "description": "O alvo recebe -1 ação no próximo turno. Faça um ataque corpo a corpo ou à distância."
+        },
+        {
+          "id": "ampliar",
+          "name": "Ampliar",
+          "actions": 1,
+          "isPassive": false,
+          "range": "próprio",
+          "description": "Durante 1 turno, seus ataques corpo a corpo alcançam 2 cm em vez de 1 cm. Faça um ataque corpo a corpo."
+        },
+        {
+          "id": "sede-de-sangue",
+          "name": "Sede de Sangue",
+          "actions": 2,
+          "isPassive": true,
+          "range": "próprio",
+          "description": "Ao acertar um golpe fatal restaura 1 PV do cavaleiro."
+        }
+      ]
+    }
+  ]
+}
